@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@keyframes b {
+    0% {
+        z-index: 10;
+        background: #000;
+    }
+
+    100% {
+        z-index: 0;
+        display: none;
+        background: transparent;
+    }
+}
+
+ul {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: b 0.3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+
+}
+
+ul li {
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    animation: a 1.6s ease-in-out infinite;
+}
+
+ul li:nth-child(1) {
+    animation-delay: -1.4s;
+    background: #FFFF00;
+    box-shadow: 0px 0px 50px #FFFF00;
+}
+
+ul li:nth-child(2) {
+    animation-delay: -1.2s;
+    background: #FF1493;
+    box-shadow: 0px 0px 50px #FF1493;
+}
+
+ul li:nth-child(3) {
+    animation-delay: -1s;
+    background: #00FF00;
+    box-shadow: 0px 0px 50px #00FF00;
+}
+
+ul li:nth-child(4) {
+    animation-delay: -0.8s;
+    background: #00FFFF;
+    box-shadow: 0px 0px 50px #00FFFF;
+}
+
+ul li:nth-child(5) {
+    animation-delay: -0.6s;
+    background: #FF0000;
+    box-shadow: 0px 0px 50px #FF0000;
+}
+
+ul li:nth-child(6) {
+    animation-delay: -0.4s;
+    background: #3333FF;
+    box-shadow: 0px 0px 50px #3333FF;
+}
+
+@keyframes a {
+
+    0%,
+    40%,
+    100% {
+        transform: scale(0.2);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(0, 41, 68), rgb(0, 75, 56));
+    width: 100vw;
+    z-index: 9;
+    height: 100vh;
+    background-size: 100% 1000%;
+    animation: animas 8s infinite linear;
+
+}
+
+@keyframes animas {
+    0% {
+        background-position: 50% 0;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    z-index: 10;
+    color: #000;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 1000%;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(135deg, rgb(0, 41, 68), rgb(0, 75, 56));
+    -webkit-text-fill-color: transparent;
+    animation: anma 8s infinite linear;
+    font-family: 'Rubik Moonrocks';
+}
+
+@keyframes anma {
+    0% {
+        background-position: 50% 0;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
+}
+
+.div {
+    position: relative;
+    width: 60%;
+    height: 30%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.div::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-size: 1000% 100%;
+    height: 430%;
+    background-image: linear-gradient(90deg, rgb(0, 255, 0), rgb(251, 255, 0), RED);
+    animation: anima 10s infinite linear;
+
+}
+
+.div::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    inset: 10px;
+    background-color: gray;
+}
+
+@keyframes anima {
+    0% {
+        transform: rotate(0deg);
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        background-position: 0 50%;
+    }
+
+}
